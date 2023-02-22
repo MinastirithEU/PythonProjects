@@ -32,7 +32,7 @@ def decode():
     qr_code = filedialog.askopenfilename(initialdir="/", title="Select File", filetypes=(("image", ".jpg"), ("image", ".jpeg"), ("image", ".png")))
     code_detector = cv2.QRCodeDetector()
     code_str, _, _ = code_detector.detectAndDecode(cv2.imread(qr_code))
-    pop_up(code_str)
+    pop_up(code_str) 
 
 class App(customtkinter.CTk):
     def __init__(self):
